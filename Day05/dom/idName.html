@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idName</title>
+</head>
+<body>
+    <p id="welcome">환영합니다</p>
+    <script>
+        const changeColor = ((newColor) => { // 애로우 함수, 화살표 함수 / (): 입력, {}: 실행
+            const welc = document.getElementById("welcome");    // getElementById()를 통해 반환된 collection을 변수에 저장
+            welc.style.color = newColor;    // 버튼 누르면 '환영합니다' 빨간색으로 바뀜
+        });
+    </script>
+    <button type="button" onclick="changeColor('red');">빨강 변신</button>  <!-- onclick: 이벤트 발생 속성 -->
+    <button type="button" onclick="changeColor('blue');">파랑 변신</button>
+</body>
+</html>

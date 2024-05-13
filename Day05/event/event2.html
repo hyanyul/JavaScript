@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event2</title>
+    <style>
+        #container{
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="../src/cup1.png" id="cup">
+    </div>
+    <script>
+        const cup = document.querySelector("#cup");
+        cup.onclick = changeCup;
+
+        function changeCup(){
+            cup.src = "../src/cup2.png"
+        }
+    </script>
+</body>
+</html>

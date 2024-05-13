@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event1</title>
+    <style>
+        #container{
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="../src/cup1.png" id="cup">
+    </div>
+    <script>
+        let cup = document.querySelector("#cup");
+        cup.onclick = function(){
+            alert("이미지를 클릭하였습니다.");
+        }
+    </script>
+</body>
+</html>

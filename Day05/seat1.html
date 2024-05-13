@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치도</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            /* border: 1px solid black; */
+        }
+        td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        let memNum = prompt("입장객은 몇명입니까?");
+        let colNum = prompt("한 줄에 몇명씩 앉습니까?");
+        let row = Math.floor(memNum / colNum);
+        console.log(row)
+        document.write(`<table>`);
+        let index = 0;
+        for(let i=1; i<=row+1; i++){
+            document.write(`<tr>`);
+            for(let a=1+(colNum*index); a<=colNum*i; a++){
+                if(a > memNum){
+                    break;
+                }
+                document.write(`<td>좌석${a}</td>`);
+                console.log(index);    
+                }
+            document.write(`</tr>`);
+            index++;
+        }
+        document.write(`</table>`);
+    </script>
+</body>
+</html>
+
+<!-- 
+    자바스크립트에서 HTML 태그를 적용하려면 document.write("~~"); 작성
+ -->

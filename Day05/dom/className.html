@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByClassName</title>
+</head>
+<body>
+    <h1>getElementByClassName</h1>
+    <h2>분식점 메뉴</h2>
+    <ul>
+        <li>김밥</li>
+        <li>라면</li>
+        <li>떡볶이</li>
+    </ul>
+    <h2>중국집 메뉴</h2>
+    <ul>
+        <li class="a">짜장면</li>
+        <li class="a">짬뽕</li>
+        <li class="a">탕수육</li>
+    </ul>
+    <script>
+        const foodListElement = document.getElementsByClassName("a");
+        console.log(foodListElement[0].textContent);    // class명이 a인 요소 중 0번째 출력
+    </script>
+</body>
+</html>

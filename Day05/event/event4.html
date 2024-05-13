@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event4</title>
+    <style>
+        #container{
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="../src/girl.jpg" id="cover">
+    </div>
+    <script>
+        const cover = document.getElementById("cover");
+        // cover.addEventListener("mouseover", function(){
+        //     cover.src = "../src/boy.jpg";
+        // });
+        // cover.addEventListener("mouseout", function(){
+        //     cover.src = "../src/girl.jpg";
+        // });
+        
+        cover.addEventListener("mouseover", () => {
+            cover.src = "../src/boy.jpg";
+        });
+        cover.addEventListener("mouseout", () => {
+            cover.src = "../src/girl.jpg";
+        });
+    </script>
+</body>
+</html>

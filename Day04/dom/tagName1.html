@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getElementByTagName1</title>
+</head>
+<body>
+  <h1>getElementByTagName</h1>
+  <ul>
+    <li>김밥</li>
+    <li>라면</li>
+    <li>떡볶이</li>
+  </ul>
+  <script>
+    const allElements = document.getElementsByTagName("*");
+    console.log(allElements);
+
+    const liElements = document.getElementsByTagName("li");
+    console.log(liElements[0].textContent);
+  </script>
+</body>
+</html>

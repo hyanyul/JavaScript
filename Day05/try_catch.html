@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try_catch</title>
+</head>
+<body>
+    <script>
+        // let memNum = prompt("입장객은 몇명입니까?");
+        // let colNum = prompt("한 줄에 몇명씩 앉습니까?");
+
+        // let rowNum = parseInt(memNum / colNum) + 1;
+
+        // for(let i=0; i<rowNum; i++){
+        //     for(let j=1; j<=colNum && (j + colNum * i) <= memNum; j++){
+        //         // if((j + colNum * i) > memNum) break;
+        //         document.write(`${j + colNum * i} `);
+        //     }
+        //     document.write("<br>");
+        // }
+        111
+        let solution = 74;
+        
+        function checkGuess(){
+            try{
+                let submitNum = document.getElementById('number').value;    // id가 number인 곳의 값 나옴
+                // console.log(typeof(submitNum)); // submit: string 타입
+            
+                if(submitNum < 1 || submitNum > 100) throw "범위 내의 숫자를 입력해주세요.";
+                else if(submitNum < solution) throw "작음";
+                else if(submitNum > solution) throw "큼";
+                else if(submitNum == solution) throw "정답";
+                
+            }catch(err){
+                let e = document.getElementById("msg");
+                if(err == "작음" || err == "큼"){
+                    e.innerHTML = '힌트: ' + err;
+                } else{
+                    e.innerHTML = err;
+                }
+            }
+        }
+    </script>
+    <h1>Number guess</h1>
+    <p>1부터 100까지의 숫자를 입력하시오.</p>
+    <!-- <form> -->
+        <input type="text" id="number">
+        <button onclick="checkGuess()">숫자 추측</button>
+    <!-- </form> -->
+    <p id="msg"></p>
+</body>
+</html>

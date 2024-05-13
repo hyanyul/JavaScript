@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event3</title>
+    <style>
+        #container{
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="../src/girl.jpg" id="cover">
+    </div>
+    <script>
+        const cover = document.getElementById('cover');
+        cover.addEventListener("mouseover", changePic);  // mouseover 되었을 때 changePic 동작
+        cover.addEventListener("mouseout", originPic);
+
+        function changePic(){
+            cover.src = "../src/boy.jpg";
+        }
+
+        function originPic(){
+            cover.src = "../src/girl.jpg";
+        }
+    </script>
+</body>
+</html>
